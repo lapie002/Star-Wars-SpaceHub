@@ -21,7 +21,7 @@
             <a href="">Star Wars &nbsp;&nbsp; SWAPI</a>
         </div>
         <div class="col-md-9 text-right links">
-            <a href="#">Characters</a>
+            <a href="{{ url('/characters/1') }}">Characters</a>
             <a href="#">Planets</a>
             <a href="#">Starships</a>
             <a href="#">Search</a>
@@ -33,7 +33,7 @@
             Directory Services
         </div>
         <div class="bottom-center links">
-            <a href="#">Characters</a>
+            <a href="{{ url('/characters/1') }}">Characters</a>
             <a href="#">Planets</a>
             <a href="#">Starships</a>
             <a href="#">Search</a>

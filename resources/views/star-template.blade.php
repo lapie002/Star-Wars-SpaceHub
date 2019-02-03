@@ -4,14 +4,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>FlightHub Test</title>
+    <title>@yield('titre')</title>
+
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/welcome.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/characters.css') }}" rel="stylesheet">
 </head>
 <body>
 
@@ -21,24 +22,14 @@
             <a href="">Star Wars &nbsp;&nbsp; SWAPI</a>
         </div>
         <div class="col-md-9 text-right links">
-            <a href="#">Characters</a>
-            <a href="#">Planets</a>
-            <a href="#">Starships</a>
-            <a href="#">Search</a>
-        </div>
-    </div>
-
-    <div class=" contentA ">
-        <div class="title ">
-            Directory Services
-        </div>
-        <div class="bottom-center links">
-
-            @yield('contenu')
-
+            <a href="{{ url('/') }}">Retour</a>
         </div>
     </div>
 </div>
+
+@yield('contenu')
+
+
 <div class="container">
     <div class="linksPl"></div>
 </div>
