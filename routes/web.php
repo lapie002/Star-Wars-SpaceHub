@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/character/{id}', 'WarsController@getInfoTest')->where('id', '[0-9]+');
