@@ -39,7 +39,7 @@ class PlanetsController extends Controller
 
         $max_planet_per_page = self::getPlanetsMaxCount() / 10;
 
-        // il faut que $max_per_page soit egal à 7
+        // il faut que $max_planet_per_page soit egal à 7
         $max_planet_per_page = floor($max_planet_per_page) + 1;
 
         $id = intval($paginate) + 1;

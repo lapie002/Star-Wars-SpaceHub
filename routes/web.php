@@ -43,3 +43,6 @@ Route::get('/previousstarshipspaginate/{paginate}', 'StarshipsController@getPrev
 
 Route::get('/nextstarshipspaginate/{paginate}', 'StarshipsController@getNextStarshipsPaginate')->where('paginate', '[0-9]+');
 
+
+
+
