@@ -22,7 +22,7 @@
         </div>
         <div class="col-md-9 text-right links">
             <a href="{{ url('/characters/1') }}">Characters</a>
-            <a href="#">Planets</a>
+            <a href="{{ url('/planets/1') }}">Planets</a>
             <a href="#">Starships</a>
             <a href="#">Search</a>
         </div>
@@ -34,7 +34,7 @@
         </div>
         <div class="bottom-center links">
             <a href="{{ url('/characters/1') }}">Characters</a>
-            <a href="#">Planets</a>
+            <a href="{{ url('/planets/1') }}">Planets</a>
             <a href="#">Starships</a>
             <a href="#">Search</a>
         </div>

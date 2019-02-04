@@ -28,7 +28,18 @@ Route::get('/nextpaginate/{paginate}', 'CharactersController@getNextCharactersPa
 
 /****************Planets Route*********************/
 
+Route::get('/planets/{id}', 'PlanetsController@getAllPlanets')->where('id', '[0-9]+');
+
+Route::get('/previousplanetspaginate/{paginate}', 'PlanetsController@getPreviousPlanetsPaginate')->where('paginate', '[0-9]+');
+
+Route::get('/nextplanetspaginate/{paginate}', 'PlanetsController@getNextPlanetsPaginate')->where('paginate', '[0-9]+');
 
 
+/****************Starships Route : starships*********************/
 
-/****************Starships Route*********************/
+Route::get('/starships/{id}', 'StarshipsController@getAllStarships')->where('id', '[0-9]+');
+
+Route::get('/previousstarshipspaginate/{paginate}', 'StarshipsController@getPreviousStarshipsPaginate')->where('paginate', '[0-9]+');
+
+Route::get('/nextstarshipspaginate/{paginate}', 'StarshipsController@getNextStarshipsPaginate')->where('paginate', '[0-9]+');
+

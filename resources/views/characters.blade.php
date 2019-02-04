@@ -1,7 +1,7 @@
 @extends('star-template')
 
 @section('titre')
-    Les personnages
+    Star Wars Characters
 @endsection
 
 @section('contenu')
@@ -42,7 +42,7 @@
                     <li class="page-item"><a class="page-link" href="{{ url('/characters/' . $i) }}">{{$i}}</a></li>
                 @endfor
 
-                <li class="page-item"><a class="page-link" href="{{ url('/nextpaginate/' . $paginate) }}">Previous</a></li>
+                <li class="page-item"><a class="page-link" href="{{ url('/nextpaginate/' . $paginate) }}">Next</a></li>
             </ul>
         </nav>
 

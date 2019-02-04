@@ -31,8 +31,9 @@ class CharactersController extends Controller
 
         $paginate = $id;
 
-        $max_per_page = self::getCharactersMaxCount() % 10;
-        $max_per_page = $max_per_page + 2;
+        $max_per_page = self::getCharactersMaxCount() / 10;
+
+        $max_per_page = floor($max_per_page) + 1;
 
         return view('characters')->with('characters', $characters)->with('paginate', $paginate)->with('max_per_page', $max_per_page);
 
@@ -40,19 +41,10 @@ class CharactersController extends Controller
 
     public function getPreviousCharactersPaginate($paginate){
 
-        // il faut que $max_per_page = 9
-
-        $max_per_page = self::getCharactersMaxCount() % 10;
-        $max_per_page = $max_per_page + 2;
-
-
         $id = intval($paginate) - 1;
 
         if($id==0){
             $id = 1;
-        }
-        else{
-            $id = $id % $max_per_page;
         }
 
         return redirect('/characters/' . $id);
@@ -61,18 +53,15 @@ class CharactersController extends Controller
 
     public function getNextCharactersPaginate($paginate){
 
-        // il faut que $max_per_page = 11
+        // il faut que $max_per_page = 9
+        $max_per_page = self::getCharactersMaxCount() / 10;
 
-        $max_per_page = self::getCharactersMaxCount() % 10;
-        $max_per_page = $max_per_page + 3;
+        $max_per_page = floor($max_per_page) + 1;
 
         $id = intval($paginate) + 1;
 
-        if($id==10){
+        if( $id == ($max_per_page + 1) ){
             $id = 1;
-        }
-        else{
-            $id = $id % $max_per_page;
         }
 
         return redirect('/characters/' . $id);
@@ -82,6 +71,7 @@ class CharactersController extends Controller
      public static function getCharactersMaxCount(){
 
         $url = "https://swapi.co/api/people/?format=json";
+
         $json = file_get_contents($url);
         $json_data = json_decode($json, true);
 
