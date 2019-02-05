@@ -22,7 +22,7 @@
             <a href="">Star Wars &nbsp;&nbsp; SWAPI</a>
         </div>
         <div class="col-md-9 text-right links">
-            <a href="{{ url('/') }}">Retour</a>
+            <a href="{{ url('/') }}">Return</a>
         </div>
     </div>
 </div>

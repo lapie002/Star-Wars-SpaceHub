@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 
-/****************Characters Route*******************/
+/****************Characters Route : characters*******************/
 
 Route::get('/character/{id}', 'CharactersController@getCharacterById')->where('id', '[0-9]+');
 
@@ -26,7 +26,7 @@ Route::get('/previouspaginate/{paginate}', 'CharactersController@getPreviousChar
 
 Route::get('/nextpaginate/{paginate}', 'CharactersController@getNextCharactersPaginate')->where('paginate', '[0-9]+');
 
-/****************Planets Route*********************/
+/****************Planets Route : planets*********************/
 
 Route::get('/planets/{id}', 'PlanetsController@getAllPlanets')->where('id', '[0-9]+');
 
@@ -42,6 +42,14 @@ Route::get('/starships/{id}', 'StarshipsController@getAllStarships')->where('id'
 Route::get('/previousstarshipspaginate/{paginate}', 'StarshipsController@getPreviousStarshipsPaginate')->where('paginate', '[0-9]+');
 
 Route::get('/nextstarshipspaginate/{paginate}', 'StarshipsController@getNextStarshipsPaginate')->where('paginate', '[0-9]+');
+
+/************ Search Route : search for a character******************/
+
+Route::get('/search','SearchController@getSearch');
+
+Route::post('/search','SearchController@postSearch');
+
+
 
 
 

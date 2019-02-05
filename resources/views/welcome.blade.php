@@ -24,7 +24,7 @@
             <a href="{{ url('/characters/1') }}">Characters</a>
             <a href="{{ url('/planets/1') }}">Planets</a>
             <a href="{{ url('/starships/1') }}">Starships</a>
-            <a href="#">Search</a>
+            <a href="{{ url('/search') }}">Search</a>
         </div>
     </div>
 
@@ -36,7 +36,7 @@
             <a href="{{ url('/characters/1') }}">Characters</a>
             <a href="{{ url('/planets/1') }}">Planets</a>
             <a href="{{ url('/starships/1') }}">Starships</a>
-            <a href="#">Search</a>
+            <a href="{{ url('/search') }}">Search</a>
         </div>
     </div>
 </div>
